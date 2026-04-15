@@ -57,6 +57,11 @@ int main(int argc, char **argv)
     int col;
     find_player(map, &row, &col);
     printf("player is at (%d , %d)\n",row, col);
+
+    if (check_path(map))
+	    printf("Map has a valid path\n");
+    else
+	    printf("Map has NO valid path\n");
     /////////////////////////////////////////////
     game.mlx = mlx_init();
     if(!game.mlx)

@@ -46,5 +46,6 @@ void    find_player(char **map, int *row, int *col);
 int     count_map_row(char **map);
 char    **duplicate_map(char **map);
 void    free_map(char **map);
-
+void	flood_fill(char **map, int row, int col, int cols, int rows);
+int     check_path(char **map);
 #endif

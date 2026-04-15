@@ -81,4 +81,55 @@ char **duplicate_map(char **map)
     copy_to_dup(map, dup, size);
     return(dup);
 }
+void	flood_fill(char **map, int row, int col, int cols, int rows)
+{
+    // int cols;
+    // int rows;
 
+    // cols = ft_strln(map[0]);
+    // rows = count_map_row(map);
+    if((row < 0) || (col < 0) ||  row >= rows || col >= cols 
+    || map[row][col] == '1' || map[row][col] == 'X' )
+        return;
+    map[row][col] = 'X';
+    flood_fill(map, row - 1, col, rows, cols); // up
+	flood_fill(map, row + 1, col, rows, cols); // down
+	flood_fill(map, row, col - 1, rows, cols); // left
+	flood_fill(map, row, col + 1, rows, cols); // right
+}
+int check_path(char **map)
+{
+    char **dup;
+    int row;
+    int col;
+    int cols;
+    int rows;
+    int x;
+    int y;
+
+    cols = ft_strln(map[0]);
+    rows = count_map_row(map);
+    dup = duplicate_map(map);
+    if (!dup)
+        return (0);
+    find_player(dup,&row, &col);
+    flood_fill(dup, row,col, cols, rows);
+    x = 0;
+    while(dup[x])
+    {
+        y = 0;
+        while (dup[x][y])
+        {
+            if(dup[x][y] == 'C' || dup[x][y] == 'E')
+            {
+                free_map(dup);
+                return(0);
+
+            }
+            y++;
+        }
+       x++; 
+    }
+    free_map(dup);
+    return(1);
+}
