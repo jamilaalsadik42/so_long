@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:19:32 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 12:15:21 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 18:19:42 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main(int argc, char **argv)
         "so_long");
     if(!game.win)
         error_exit("mlx_new_window  failed \n");
+    render_map(&game);
     mlx_loop(game.mlx);
     return(0);
 }

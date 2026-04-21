@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 11:41:16 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 17:48:59 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define SO_LONG_H
 
 #include "../minilibx-linux/mlx.h"
+#include "../get_next_line/get_next_line.h"
 #include<stdlib.h>
 #include<unistd.h>
 
@@ -23,9 +24,9 @@ typedef struct s_game
 {
     void *mlx;
     void *win;
-    char **map;//2D array of strings
-    int map_height;//height of map rows num
-    int map_width; //col num
+    char **map;
+    int map_height;
+    int map_width;
 } t_game;
 typedef struct s_count
 {
@@ -52,5 +53,6 @@ void	flood_fill(char **map, int row, int col, int cols, int rows);
 int     check_path(char **map);
 int     check_C_E(char **dup);
 int     validate_map(char **map);
-
+void	draw_square(t_game *game, int row, int col, int color);
+void	render_map(t_game *game);
 #endif
