@@ -83,11 +83,6 @@ char **duplicate_map(char **map)
 }
 void	flood_fill(char **map, int row, int col, int cols, int rows)
 {
-    // int cols;
-    // int rows;
-
-    // cols = ft_strln(map[0]);
-    // rows = count_map_row(map);
     if((row < 0) || (col < 0) ||  row >= rows || col >= cols 
     || map[row][col] == '1' || map[row][col] == 'X' )
         return;
@@ -121,15 +116,10 @@ int check_path(char **map)
         while (dup[x][y])
         {
             if(dup[x][y] == 'C' || dup[x][y] == 'E')
-            {
-                free_map(dup);
-                return(0);
-
-            }
+                return(free_map(dup), 0);
             y++;
         }
        x++; 
     }
-    free_map(dup);
-    return(1);
+    return(free_map(dup),1);
 }
