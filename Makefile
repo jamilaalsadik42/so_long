@@ -7,12 +7,13 @@ INC = -Iincludes -Iget_next_line -Iminilibx-linux
 MLX_DIR = minilibx-linux
 MLX_LIB = -L$(MLX_DIR) -lmlx -lXext -lX11 -lm -lbsd
 
-SRC = src/main.c src/error.c src/map_check.c \
-	src/map_read.c src/helper.c \
+SRC = src/core/main.c src/core/error.c src/map/map_check.c \
+	src/map/map_read.c src/core/helper.c \
 	get_next_line/get_next_line.c \
 	get_next_line/get_next_line_utils.c \
-	src/map_elements.c src/map_path.c\
-	src/map_walls.c
+	src/map/map_elements.c src/map/map_path.c\
+	src/map/map_walls.c src/render/draw.c\
+	src/render/render_map.c
 
 OBJ = $(SRC:.c=.o)
 

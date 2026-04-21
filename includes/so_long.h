@@ -6,7 +6,7 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 11:28:34 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 11:41:16 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ void    free_map(char **map);
 void	flood_fill(char **map, int row, int col, int cols, int rows);
 int     check_path(char **map);
 int     check_C_E(char **dup);
+int     validate_map(char **map);
 
 #endif

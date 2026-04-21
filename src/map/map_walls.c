@@ -6,11 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:05:56 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 11:36:36 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:16:20 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 static int check_i(char **map, int last_col)
 {

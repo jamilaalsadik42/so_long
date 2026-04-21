@@ -6,11 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 13:04:48 by jamila            #+#    #+#             */
-/*   Updated: 2026/03/31 13:16:53 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:15:43 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 t_count count_elements(char **map)
 {

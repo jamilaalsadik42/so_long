@@ -6,11 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:32:35 by jamila            #+#    #+#             */
-/*   Updated: 2026/02/26 02:34:11 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:15:06 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../../includes/so_long.h"
 
 void error_exit(const char *msg)
 {

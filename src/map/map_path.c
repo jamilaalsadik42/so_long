@@ -6,11 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 11:02:11 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/08 12:05:44 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:15:54 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 void    find_player(char **map, int *row, int *col)
 {

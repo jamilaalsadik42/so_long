@@ -6,12 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 02:52:05 by jamila            #+#    #+#             */
-/*   Updated: 2026/03/24 12:16:39 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:16:09 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
-#include "../get_next_line/get_next_line.h"
+#include "../../includes/so_long.h"
 #include <fcntl.h>
 
 int count_lines(char *filename)

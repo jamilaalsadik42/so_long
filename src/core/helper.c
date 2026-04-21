@@ -6,11 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:42:53 by jamila            #+#    #+#             */
-/*   Updated: 2026/03/24 11:44:23 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:15:16 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 int ft_strln(char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 12:16:43 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 11:23:20 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 12:15:36 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
 int is_rectangular(char **map)
 {
