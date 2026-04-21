@@ -6,7 +6,7 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/08 11:09:18 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 11:28:34 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 #include<stdlib.h>
 #include<unistd.h>
 
+# define TILE_SIZE 64
 typedef struct s_game
 {
     void *mlx;
     void *win;
     char **map;//2D array of strings
-    int map_height;//height of map
+    int map_height;//height of map rows num
+    int map_width; //col num
 } t_game;
 typedef struct s_count
 {

@@ -6,7 +6,7 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 12:16:43 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 11:06:45 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/21 11:23:20 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int is_rectangular(char **map)
     int width;
     if(!map || !map[0])
         return(0);
-    width = ft_strlen(map[0]);
+    width = ft_strln(map[0]);
     i = 1;
     while (map[i])
     {
-        if(width != ft_strlen(map[i]))
+        if(width != ft_strln(map[i]))
             return (0);
         i++;
     }
