@@ -19,6 +19,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	chmod +x $(MLX_DIR)/configure
 	$(MAKE) -C $(MLX_DIR)
 	$(CC) $(CFLAGS) $(OBJ) $(MLX_LIB) -o $(NAME)
 
