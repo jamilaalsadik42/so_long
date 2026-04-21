@@ -6,7 +6,7 @@
 /*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 17:48:59 by jalsadik         ###   ########.fr       */
+/*   Updated: 2026/04/21 18:24:05 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ typedef struct s_game
     char **map;
     int map_height;
     int map_width;
+    int	player_row;
+	int	player_col;
+	int	moves;
 } t_game;
 typedef struct s_count
 {
