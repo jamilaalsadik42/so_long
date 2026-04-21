@@ -48,4 +48,6 @@ char    **duplicate_map(char **map);
 void    free_map(char **map);
 void	flood_fill(char **map, int row, int col, int cols, int rows);
 int     check_path(char **map);
+int     check_C_E(char **dup);
+
 #endif

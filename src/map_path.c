@@ -81,7 +81,7 @@ char **duplicate_map(char **map)
     copy_to_dup(map, dup, size);
     return(dup);
 }
-void	flood_fill(char **map, int row, int col, int cols, int rows)
+void	flood_fill(char **map, int row, int col, int rows, int cols)
 {
     if((row < 0) || (col < 0) ||  row >= rows || col >= cols 
     || map[row][col] == '1' || map[row][col] == 'X' )
@@ -99,8 +99,6 @@ int check_path(char **map)
     int col;
     int cols;
     int rows;
-    int x;
-    int y;
 
     cols = ft_strln(map[0]);
     rows = count_map_row(map);
@@ -108,18 +106,8 @@ int check_path(char **map)
     if (!dup)
         return (0);
     find_player(dup,&row, &col);
-    flood_fill(dup, row,col, cols, rows);
-    x = 0;
-    while(dup[x])
-    {
-        y = 0;
-        while (dup[x][y])
-        {
-            if(dup[x][y] == 'C' || dup[x][y] == 'E')
-                return(free_map(dup), 0);
-            y++;
-        }
-       x++; 
-    }
+    flood_fill(dup, row, col, rows, cols);
+    if(!check_C_E(dup))
+      return(free_map(dup),0);  
     return(free_map(dup),1);
 }

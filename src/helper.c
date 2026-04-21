@@ -46,3 +46,22 @@ void free_map(char **map)
     }
     free(map);
 }
+int check_C_E(char **dup)
+{
+    int x;
+    int y;
+
+    x = 0;
+    while(dup[x])
+    {
+        y = 0;
+        while (dup[x][y])
+        {
+            if(dup[x][y] == 'C' || dup[x][y] == 'E')
+                return(0);
+            y++;
+        }
+       x++; 
+    }
+    return(1);
+}

@@ -11,8 +11,8 @@ SRC = src/main.c src/error.c src/map_check.c \
 	src/map_read.c src/helper.c \
 	get_next_line/get_next_line.c \
 	get_next_line/get_next_line_utils.c \
-	src/map_elements.c \
-	src/map_path.c
+	src/map_elements.c src/map_path.c\
+	src/map_walls.c
 
 OBJ = $(SRC:.c=.o)
 
