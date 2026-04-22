@@ -6,7 +6,7 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/22 11:26:23 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/22 18:51:49 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int     is_valid_char(char c);
 int     has_valid_chars(char **map);
 t_count	count_elements(char **map);
 int		has_valid_elements(char **map);
+int     Count_collectibles(char **map);
 int     check_valid_wall(char **map );
 void    find_player(char **map, int *row, int *col);
 int     count_map_row(char **map);

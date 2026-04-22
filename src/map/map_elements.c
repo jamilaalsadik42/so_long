@@ -6,7 +6,7 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/31 13:04:48 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 12:15:43 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/22 18:51:21 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,25 @@ int has_valid_elements(char **map)
     if(count.c < 1)
         return(0);
     return(1);
+}
+int Count_collectibles(char **map)
+{
+    int i;
+    int j;
+    int count;
+
+    i = 0;
+    count = 0;
+    while (map[i])
+    {
+        j = 0;
+        while (map[i][j])
+        {
+            if(map[i][j] == 'C')
+                count++;
+            j++;
+        }
+        i++;
+    }
+    return(count); 
 }
