@@ -17,6 +17,7 @@ SRC = src/core/main.c \
 	src/map/map_walls.c \
 	src/render/draw.c \
 	src/render/render_map.c \
+	src/game/input.c \
 	get_next_line/get_next_line.c \
 	get_next_line/get_next_line_utils.c
 

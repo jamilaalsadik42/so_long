@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 18:24:05 by jalsadik         ###   ########.fr       */
+/*   Updated: 2026/04/22 11:26:23 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_game
     int	player_row;
 	int	player_col;
 	int	moves;
+    int	collectibles;
 } t_game;
 typedef struct s_count
 {
@@ -58,4 +59,5 @@ int     check_C_E(char **dup);
 int     validate_map(char **map);
 void	draw_square(t_game *game, int row, int col, int color);
 void	render_map(t_game *game);
+int     key_hook(int keycode, t_game *game);
 #endif

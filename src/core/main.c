@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:19:32 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/21 18:19:42 by jalsadik         ###   ########.fr       */
+/*   Updated: 2026/04/22 11:07:58 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main(int argc, char **argv)
         error_exit("Map Read Failed\n");
     if(!validate_map(game.map))
         error_exit("Invalid Map\n");
+    game.moves = 0;
+    find_player(game.map, &game.player_row, &game.player_col);
     game.map_height = count_map_row(game.map);
     game.map_width = ft_strln(game.map[0]);
     game.mlx = mlx_init();
