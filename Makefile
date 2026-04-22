@@ -26,7 +26,10 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	chmod +x $(MLX_DIR)/configure
+	@if [ ! -f $(MLX_DIR)/Makefile.gen ]; then \
+		chmod +x $(MLX_DIR)/configure; \
+		cd $(MLX_DIR) && ./configure; \
+	fi
 	$(MAKE) -C $(MLX_DIR)
 	$(CC) $(CFLAGS) $(OBJ) $(MLX_LIB) -o $(NAME)
 
@@ -34,7 +37,9 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
-	$(MAKE) -C $(MLX_DIR) clean
+	@if [ -f $(MLX_DIR)/Makefile.gen ]; then \
+		$(MAKE) -C $(MLX_DIR) clean; \
+	fi
 	rm -f $(OBJ)
 
 fclean: clean
