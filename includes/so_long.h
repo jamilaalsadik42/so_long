@@ -6,7 +6,7 @@
 /*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/26 14:48:10 by jalsadik         ###   ########.fr       */
+/*   Updated: 2026/04/26 15:35:53 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ int		key_hook(int keycode, t_game *game);
 void	load_images(t_game *game);
 int		close_window(t_game *game);
 void	free_partial(char **dup, int x);
+void	clean_exit(t_game *game);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 11:42:53 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/26 14:58:32 by jalsadik         ###   ########.fr       */
+/*   Updated: 2026/04/26 15:21:06 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ int	check_c_e(char **dup)
 
 int	close_window(t_game *game)
 {
-	(void)game;
-	exit(0);
+	clean_exit(game);
+	return (0);
 }
