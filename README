@@ -1,0 +1,375 @@
+*This project has been created as part of the 42 curriculum by jalsadik.*
+
+# 🕹️ so_long
+
+## 📌 Description
+
+**so_long** is a simple 2D game built using the MiniLibX graphical library.
+
+The objective of the game is to:
+
+* collect all collectibles (`C`)
+* then reach the exit (`E`)
+
+This project focuses on:
+
+* window management
+* textures rendering
+* event handling (keyboard input)
+* map parsing and validation
+
+---
+
+## ⚙️ Instructions
+
+### Compilation
+
+```bash
+make
+```
+
+### Run the game
+
+```bash
+./so_long maps/map.ber
+```
+
+---
+
+## 🎮 Controls
+
+```
+↑  → move up
+↓  → move down
+←  → move left
+→  → move right
+ESC → exit game
+```
+
+---
+
+## 🗺️ Map Rules*This project has been created as part of the 42 curriculum by jalsadik.*
+
+# 🕹️ so_long
+
+## 📌 Description
+
+**so_long** is a simple 2D game built using the MiniLibX graphical library.
+
+The objective of the game is to:
+
+* collect all collectibles (`C`)
+* then reach the exit (`E`)
+
+This project focuses on:
+
+* window management
+* textures rendering
+* event handling (keyboard input)
+* map parsing and validation
+
+---
+
+## ⚙️ Instructions
+
+### Compilation
+
+```bash
+make
+```
+
+### Run the game
+
+```bash
+./so_long maps/map.ber
+```
+
+---
+
+## 🎮 Controls
+
+```
+↑  → move up
+↓  → move down
+←  → move left
+→  → move right
+ESC → exit game
+```
+
+---
+
+## 🗺️ Map Rules
+
+The map must:
+
+* Be **rectangular**
+* Be surrounded by walls (`1`)
+* Contain:
+
+  * 1 player (`P`)
+  * 1 exit (`E`)
+  * at least 1 collectible (`C`)
+* Use only valid characters:
+
+```
+0 = empty
+1 = wall
+P = player
+C = collectible
+E = exit
+```
+
+---
+
+## 🧠 Features
+
+* Map validation (shape, walls, elements)
+* Path validation using **flood fill**
+* Player movement with collision detection
+* Collectibles tracking
+* Win condition handling
+* Rendering using MiniLibX
+
+---
+
+## 📁 Project Structure
+
+```
+includes/       → header files  
+src/            → source files  
+textures/       → game images (.xpm)  
+maps/           → test maps  
+get_next_line/  → file reading  
+ft_printf/      → custom printf  
+minilibx-linux/ → graphics library  
+```
+
+---
+
+## 📚 Resources
+
+* MiniLibX documentation
+* man mlx
+* 42 subject
+* C documentation
+
+### 🤖 AI Usage
+
+AI was used to:
+
+* debug errors (segfaults, logic issues)
+* understand flood fill algorithm
+* fix Norminette errors
+* improve code organization
+
+All outputs were reviewed, tested, and fully understood before use.
+
+---*This project has been created as part of the 42 curriculum by jalsadik.*
+
+# 🕹️ so_long
+
+## 📌 Description
+
+**so_long** is a simple 2D game built using the MiniLibX graphical library.
+
+The objective of the game is to:
+
+* collect all collectibles (`C`)
+* then reach the exit (`E`)
+
+This project focuses on:
+
+* window management
+* textures rendering
+* event handling (keyboard input)
+* map parsing and validation
+
+---
+
+## ⚙️ Instructions
+
+### Compilation
+
+```bash
+make
+```
+
+### Run the game
+
+```bash
+./so_long maps/map.ber
+```
+
+---
+
+## 🎮 Controls
+
+```
+↑  → move up
+↓  → move down
+←  → move left
+→  → move right
+ESC → exit game
+```
+
+---
+
+## 🗺️ Map Rules
+
+The map must:
+
+* Be **rectangular**
+* Be surrounded by walls (`1`)
+* Contain:
+
+  * 1 player (`P`)
+  * 1 exit (`E`)
+  * at least 1 collectible (`C`)
+* Use only valid characters:
+
+```
+0 = empty
+1 = wall
+P = player
+C = collectible
+E = exit
+```
+
+---
+
+## 🧠 Features
+
+* Map validation (shape, walls, elements)
+* Path validation using **flood fill**
+* Player movement with collision detection
+* Collectibles tracking
+* Win condition handling
+* Rendering using MiniLibX
+
+---
+
+## 📁 Project Structure
+
+```
+includes/       → header files  
+src/            → source files  
+textures/       → game images (.xpm)  
+maps/           → test maps  
+get_next_line/  → file reading  
+ft_printf/      → custom printf  
+minilibx-linux/ → graphics library  
+```
+
+---
+
+## 📚 Resources
+
+* MiniLibX documentation
+* man mlx
+* 42 subject
+* C documentation
+
+### 🤖 AI Usage
+
+AI was used to:
+
+* debug errors (segfaults, logic issues)
+* understand flood fill algorithm
+* fix Norminette errors
+* improve code organization
+
+All outputs were reviewed, tested, and fully understood before use.
+
+---
+
+## 🎯 Notes
+
+* The player cannot exit before collecting all collectibles
+* The game closes when ESC is pressed or window is closed
+* Each move is counted and printed in the terminal
+
+---
+
+
+## 🎯 Notes
+
+* The player cannot exit before collecting all collectibles
+* The game closes when ESC is pressed or window is closed
+* Each move is counted and printed in the terminal
+
+---
+
+
+The map must:
+
+* Be **rectangular**
+* Be surrounded by walls (`1`)
+* Contain:
+
+  * 1 player (`P`)
+  * 1 exit (`E`)
+  * at least 1 collectible (`C`)
+* Use only valid characters:
+
+```
+0 = empty
+1 = wall
+P = player
+C = collectible
+E = exit
+```
+
+---
+
+## 🧠 Features
+
+* Map validation (shape, walls, elements)
+* Path validation using **flood fill**
+* Player movement with collision detection
+* Collectibles tracking
+* Win condition handling
+* Rendering using MiniLibX
+
+---
+
+## 📁 Project Structure
+
+```
+includes/       → header files  
+src/            → source files  
+textures/       → game images (.xpm)  
+maps/           → test maps  
+get_next_line/  → file reading  
+ft_printf/      → custom printf  
+minilibx-linux/ → graphics library  
+```
+
+---
+
+## 📚 Resources
+
+* MiniLibX documentation
+* man mlx
+* 42 subject
+* C documentation
+
+### 🤖 AI Usage
+
+AI was used to:
+
+* debug errors (segfaults, logic issues)
+* understand flood fill algorithm
+* fix Norminette errors
+* improve code organization
+
+All outputs were reviewed, tested, and fully understood before use.
+
+---
+
+## 🎯 Notes
+
+* The player cannot exit before collecting all collectibles
+* The game closes when ESC is pressed or window is closed
+* Each move is counted and printed in the terminal
+
+---

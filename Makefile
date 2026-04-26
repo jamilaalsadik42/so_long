@@ -10,6 +10,7 @@ MLX_LIB = -L$(MLX_DIR) -lmlx -lXext -lX11 -lm -lbsd
 SRC = src/core/main.c \
 	src/helper/error.c \
 	src/helper/helper.c \
+	src/helper/free_utils.c \
 	src/map/map_check.c \
 	src/map/map_elements.c \
 	src/map/map_path.c \
