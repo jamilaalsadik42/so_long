@@ -3,58 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:13:34 by jalsadik          #+#    #+#             */
-/*   Updated: 2026/04/25 23:17:06 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/26 14:53:33 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-void	draw_square(t_game *game, int row, int col, int color)
+static void	put_tile(t_game *game, int i, int j)
 {
-	int x;
-	int y;
-	int i;
-	int j;
-	
-	x = col * TILE_SIZE;
-	y = row * TILE_SIZE;
-	i = 0;
-	while(i < TILE_SIZE)
-	{
-		j = 0;
-		while (j < TILE_SIZE)
-		{
-		mlx_pixel_put(game->mlx, game->win,x+j, y+i, color);
-			j++;
-		}
-		i++;
-	}
+	int	x;
+	int	y;
+
+	x = j * TILE_SIZE;
+	y = i * TILE_SIZE;
+	mlx_put_image_to_window(game->mlx, game->win, game->floor_img, x, y);
+	if (game->map[i][j] == '1')
+		mlx_put_image_to_window(game->mlx, game->win, game->wall_img, x, y);
+	else if (game->map[i][j] == 'C')
+		mlx_put_image_to_window(game->mlx, game->win,
+			game->collectible_img, x, y);
+	else if (game->map[i][j] == 'E')
+		mlx_put_image_to_window(game->mlx, game->win, game->exit_img, x, y);
+	else if (game->map[i][j] == 'P')
+		mlx_put_image_to_window(game->mlx, game->win, game->player_img, x, y);
 }
+
 void	render_map(t_game *game)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	i = 0;
-	while(i < game->map_height)
+	while (i < game->map_height)
 	{
 		j = 0;
 		while (j < game->map_width)
 		{
-			if(game->map[i][j] == '1')
-				draw_square(game, i, j, 0x9C3E07);
-			else if(game->map[i][j] == 'E')
-				draw_square(game, i, j, 0x27F5A9);
-			else if(game->map[i][j] == 'C')
-				draw_square(game, i, j, 0xF5E427);
-			else if(game->map[i][j] == 'P')
-				draw_square(game, i, j, 0x2AF527);
-			else if(game->map[i][j] == '0')
-				draw_square(game, i, j, 0x63ADF8);
-			j++;	
+			put_tile(game, i, j);
+			j++;
 		}
 		i++;
 	}

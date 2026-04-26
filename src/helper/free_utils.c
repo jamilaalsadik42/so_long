@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   free_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 02:32:35 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/26 14:42:39 by jalsadik         ###   ########.fr       */
+/*   Created: 2026/04/26 14:50:00 by jalsadik          #+#    #+#             */
+/*   Updated: 2026/04/26 14:58:19 by jalsadik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-void	error_exit(const char *msg)
+void	free_partial(char **dup, int x)
 {
-	write(2, "Error\n", 6);
-	if (msg)
-		write(2, msg, ft_strln((char *)msg));
-	exit(1);
+	while (x > 0)
+		free(dup[--x]);
+	free(dup);
 }

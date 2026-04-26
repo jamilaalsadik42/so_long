@@ -16,9 +16,13 @@ SRC = src/core/main.c \
 	src/map/map_read.c \
 	src/map/map_walls.c \
 	src/render/draw.c \
+	src/render/images.c\
 	src/game/input.c \
 	get_next_line/get_next_line.c \
-	get_next_line/get_next_line_utils.c
+	get_next_line/get_next_line_utils.c\
+	ft_printf/ft_printf.c\
+	ft_printf/ft_printf_nums.c\
+	ft_printf/ft_printf_utils.c\
 
 OBJ = $(SRC:.c=.o)
 
