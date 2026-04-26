@@ -6,7 +6,7 @@
 /*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 02:18:49 by jamila            #+#    #+#             */
-/*   Updated: 2026/04/22 18:51:49 by jamila           ###   ########.fr       */
+/*   Updated: 2026/04/26 08:21:54 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ typedef struct s_game
 	int	player_col;
 	int	moves;
     int	collectibles;
+    void *wall_img;
+    void *floor_img;
+    void *player_img;
+    void *collectible_img;
+    void *exit_img;
 } t_game;
 typedef struct s_count
 {
