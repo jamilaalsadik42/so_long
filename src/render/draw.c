@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jalsadik <jalsadik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jamila <jamila@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:13:34 by jalsadik          #+#    #+#             */
-/*   Updated: 2026/04/26 14:53:33 by jalsadik         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:40:51 by jamila           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ void	render_map(t_game *game)
 		i++;
 	}
 }
+
 int	expose_hook(t_game *game)
 {
 	mlx_clear_window(game->mlx, game->win);
 	render_map(game);
 	return (0);
 }
-
