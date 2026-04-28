@@ -72,5 +72,5 @@ void	load_images(t_game *game);
 int		close_window(t_game *game);
 void	free_partial(char **dup, int x);
 void	clean_exit(t_game *game);
-
+int		expose_hook(t_game *game);
 #endif

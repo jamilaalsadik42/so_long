@@ -48,3 +48,10 @@ void	render_map(t_game *game)
 		i++;
 	}
 }
+int	expose_hook(t_game *game)
+{
+	mlx_clear_window(game->mlx, game->win);
+	render_map(game);
+	return (0);
+}
+
